@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Drama Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Financial Drama Solver 🎉</h1>
+    <div id="friendCountSection">
+        <label for="numFriends">How many friends are in this financial drama? 🤔</label>
+        <input type="number" id="numFriends" min="2" />
+        <button onclick="start()">Start 🚀</button>
+    </div>
+    <div id="friendNamesSection" class="hidden">
+        <div id="friendNamesContainer"></div>
+        <button onclick="nextToTransactions()">Next ➡️</button>
+    </div>
+    <div id="transactionsSection" class="hidden">
+        <div>
+            <label for="payer">Who is paying? 💸</label>
+            <select id="payer"></select>
+        </div>
+        <div>
+            <label for="payees">Who are they paying for? 🤔</label>
+            <div id="payeesContainer"></div>
+            <button onclick="addPayee()">➕ Add Payee</button>
+            <button onclick="selectAllPayees()">All 👫</button>
+        </div>
+        <div>
+            <label for="amount">How much is the payment? 💰</label>
+            <input type="number" id="amount" />
+        </div>
+        <div>
+            <label for="details">Payment details (optional): 📝</label>
+            <input type="text" id="details" placeholder="e.g., Food, Movie" />
+        </div>
+        <button onclick="recordTransaction()">Add Transaction ➕</button>
+        <div id="transactionsLog"></div>
+        <button onclick="finishTransactions()">Finish 🏁</button>
+    </div>
+    <div id="resultSection" class="hidden">
+        <h2>Final payments to settle debts: 💵</h2>
+        <pre id="results"></pre>
+    </div>
+
+    <!-- Finance man animation -->
+    <img id="financeMan" src="businessmanwalking.png" alt="Finance Man">
+
+    <script src="script.js"></script>
+</body>
+</html>

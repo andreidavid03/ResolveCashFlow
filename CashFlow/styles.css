@@ -1,0 +1,117 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes moveFinanceMan {
+    0% {
+        transform: translateX(0) scaleX(1);
+    }
+    50% {
+        transform: translateX(100vw) scaleX(1);
+    }
+    51% {
+        transform: translateX(100vw) scaleX(-1);
+    }
+    100% {
+        transform: translateX(0) scaleX(-1);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.9), rgba(25, 25, 25, 0.9), rgba(50, 50, 50, 0.9), rgba(75, 75, 75, 0.9), rgba(100, 100, 100, 0.9));
+    background-size: 1000% 1000%;
+    animation: gradient 15s ease infinite;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1 {
+    color: #00CED1; /* Cool cyan color for the heading */
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000; /* Add shadow to make it more visible */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00CED1; /* Cool cyan color for the labels */
+    text-shadow: 1px 1px 2px #000000; /* Add shadow to make it more visible */
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4682B4; /* Cool blue color for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5F9EA0; /* Darker cool blue color for hover */
+}
+
+.hidden {
+    display: none;
+}
+
+#friendNamesContainer input {
+    width: calc(100% - 10px);
+}
+
+pre {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#transactionsLog {
+    margin-top: 20px;
+    background-color: #E0FFFF; /* Light cool color for transaction logs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#results {
+    color: #FF4500; /* Red color for the results text */
+    text-shadow: 1px 1px 2px #000000; /* Add shadow to make it more visible */
+}
+
+#resultSection h2 {
+    color: #00CED1; /* Cool cyan color for the heading in the result section */
+    text-shadow: 1px 1px 2px #000000; /* Add shadow to make it more visible */
+}
+
+/* Finance man animation */
+#financeMan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px; /* Bigger size */
+    height: auto;
+    animation: moveFinanceMan 10s linear infinite;
+    z-index: -1; /* Ensure it is behind other elements */
+}
